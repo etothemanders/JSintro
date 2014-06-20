@@ -1,0 +1,146 @@
+// Exercise 1
+/*
+var count = 0;
+
+for (var i = 0; i < 1000; i++) {
+    if (i % 3 === 0 || i % 5 ===0) {
+        count += i;
+    }
+    }
+    
+console.log(count);
+*/
+
+// Exercise 2
+/*
+var fibonacciSet = function(max) {
+    if (max > 1) {
+        var fibList = [1];
+        var currentFib = 1;
+        
+        while (currentFib < max) {
+            fibList.push(currentFib);
+            var x = fibList.length - 1;
+            var y = fibList.length - 2;
+            currentFib = fibList[x] + fibList[y];
+        }
+        return fibList;
+    }
+    return [1, 1];
+};
+
+var even = function(n) {
+    return n % 2 == 0;
+}
+
+var sum = function(iterable) {
+    var start = 0;
+    var total = 0;
+    for (var i = start; i < iterable.length; i ++) {
+        total += iterable[i];
+    }
+    return total;
+}
+
+var filter = function(fn, iter) {
+    var resultList = []
+    for (var i = 0; i < iter.length; i ++) {
+        if (fn(iter[i])) {
+            resultList.push(iter[i]);
+        } 
+    }
+    return resultList;
+}
+
+console.log(sum(filter(even, fibonacciSet(4000000))));
+
+
+// Exercise 3
+
+var votesToGoEatCake = [true, true, true, true];
+var hackbrightStudents = ["katie", "amy", "jenny", "katie", "kelley", "katie", "amy"];
+var classroomIds = [47, 12, 19, 22, 26, 99, 30, 50, 324, 003, 44, 33, 346, 354, 44, 235, 45, 34, 44, 590, 09, 099, 0, 1, 3, 33, 999, 9];
+var randomJunkIFound = ["katie", "true", true, 19, "gargoyles", "!", 2 + 3, "2 + 3", 19, "19", 19 === "19", 6, false, false];
+
+var duplicates = function(array) {
+    var copy = [];
+    var dupes = [];
+    
+    for (i=0; i < array.length; i++) {
+        //console.log(copy.indexOf(array[i]));
+        if (copy.indexOf(array[i]) === -1) {
+            copy.push(array[i]);
+        }
+        else if (dupes.indexOf(array[i]) === -1) {
+            dupes.push(array[i]);
+        }
+    }
+    //console.log(copy);
+    return dupes;
+};*/
+
+
+//Exercise 4
+
+var cat = {
+        tiredness: 20,
+        hunger: 20,
+        lonliness: 3,
+        happiness: 15,
+        obedientness: -5000,
+        feed: function() {
+            console.log("Om nom nom");
+            this.hunger = this.hunger - 5;
+        },
+        sleep: function() {
+            console.log("ZzzzZZZZZZ");
+            this.tiredness = this.tiredness - 10;
+        },
+        pet: function() {
+            console.log("Puurrrrrrr");
+            this.happiness = this.happiness + 5;
+        },
+        laserPointer: function() {
+            console.log("Meow meow");
+            this.happiness += 15;
+            this.tiredness += 10;
+        }
+};
+
+/*
+var hs = ["katie", "amy", "jenny", "katie", "kelley", "katie", "amy"];
+
+var duplicates = function(array) {
+    var copy = [];
+    var dupes = [];
+    
+    for (i=0; i < array.length; i++) {
+        //console.log(copy.indexOf(array[i]));
+        if (copy.indexOf(array[i]) === -1) {
+            copy.push(array[i]);
+        }
+        else if (dupes.indexOf(array[i]) === -1) {
+            dupes.push(array[i]);
+        }
+    }
+    //console.log(copy);
+    return dupes;
+};
+*/
+
+//Exercise 5
+
+var Book = function(title, genre, author, read, readDate) {
+    this.title = title || "50 Shades of Grey";
+    this.genre = genre || "creepy romance";
+    this.author = author || "EL James";
+    this.read = read || "would never admit it";
+    this.readDate = readDate || "too many times to count";
+    };
+    
+var BookList = function(booksRead, booksUnread, bookShelf) {
+    this.booksRead = booksRead || 0;
+    this.booksUnread = booksUnread || 0;
+    this.bookShelf = bookShelf || [];
+};
+
